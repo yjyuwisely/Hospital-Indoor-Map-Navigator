@@ -41,9 +41,30 @@ request.setCharacterEncoding("utf-8");
 	justify-content: center;
 	align-items: center;
 }
+
 header {
-	height: 10px !important;
-	opacity: 0.9;
+  height: 15px !important;
+  opacity: 0.9;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-container {
+  height: calc(100vh - 50%);
+  overflow-y: auto;
+}
+
+.department-buttons {
+  height: 50%;
+  overflow-y: auto;
+}
+
+#print {
+  margin: 0;
+  padding: 0;
 }
 </style>
 
@@ -51,35 +72,38 @@ header {
 <body class="d-flex flex-column h-100 flex-shrink-0">
 	<div data-aos="fade-right" data-aos-offset="300"
 		data-aos-easing="ease-in-sine">
-		<div class="container p-3">
+		<div class="map-container container px-3 pt-2 pb-3">
 			<div class="row justify-content-center align-items-center">
-				<div class="col-12 col-md-8 col-lg-6 col-xxl-7 text-center">
-					<div>
+				<div class="col-12 col-md-8 col-lg-6 col-xxl-7 text-start">
 						<span class="DarkText-gradient d-inline fw-bolder Sans fs-5">병원
 							내부 위치 안내 가이드</span>
-					</div>
-					<div class="centered-div ">
+					<div class="centered-div mt-2">
 						<!-- 지도 -->
-						<div id="map" style="width: 350px; height: 350px;"></div>
+						<div id="map" style="width: 100%; height: 40vh;"></div>
 					</div>
-					<div class="centered-div mt-2 text-left">
+					<div class="centered-div pt-3" style="height: 65px; overflow-y: auto;">
 						<!-- 위치 설명 문장 -->
-						<p id="print" class="gap-3 lead rounded text-dark fs-6 fw-bold">
+						<p id="print" class="gap-3 lead rounded text-dark fs-6 fw-bold Sans">
+						하단 버튼을 클릭하면 지도에 위치가 표시되며, 자세한 위치 설명이 표시됩니다.
 						</p>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
+		</div><!-- map's section -->
+	</div><!-- aos effects -->
+	<span
+		style="height: 40px; width: 100%; background: linear-gradient(180deg, #EBF3FE, white);
+		  opacity: 0.9;"></span>
 
-	<div class="container col-xl-8 card  border-0">
+	<!-- departments buttons' section -->
+	<div class="department-buttons container col-xl-8 card border-0 px-0 ">
 		<table class="mb-3">
 			<tr>
 				<td class="fw-bold">
-					<h1 class="container col-xl-8 text-left ps-4">
+					<h1 class="container col-xl-8 text-left ps-4 mb-0">
 						<img src="resources/images/building2.png"
 							style="width: 35px; height: 35px;" border="0" /> <span
-							class="text-gradient d-inline fw-bolder Sans fs-3">진료부서</span>
+							class="text-gradient d-inline fw-bolder Sans fs-4">진료부서</span>
 					</h1>
 				</td>
 			</tr>
@@ -87,7 +111,7 @@ header {
 			<tr>
 				<td class="fw-bold">
 					<h1 class="container col-xl-8 text-left ps-4">
-						<span class=" d-inline fw-bolder Sans fs-5" style="color: #606060">1층</span>
+						<span class="d-inline fw-bolder Sans fs-5" style="color: #606060">1층</span>
 					</h1>
 				</td>
 			</tr>
@@ -179,7 +203,7 @@ header {
 					<h1 class="container col-xl-8 text-left ps-4 pt-3">
 						<img src="resources/images/cafe.png"
 							style="width: 35px; height: 35px;" border="0" /> <span
-							class="text-gradient d-inline fw-bolder Sans fs-3">편의시설</span>
+							class="text-gradient d-inline fw-bolder Sans fs-4">편의시설</span>
 					</h1>
 				</td>
 			</tr>
@@ -284,19 +308,34 @@ map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 </script>
-		<!-- Top Button -->
-		<script>
-$(function(){
-  $("#gotop").hide();
-  $(window).scroll(function(){
-    if($(this).scrollTop() > 100){$("#gotop").fadeIn();}
-    else{$("#gotop").fadeOut();}
-  });
+<!-- Top Button -->
+<!-- <script>
+$(function() {
+	$("#gotop").hide();
+	$(".department-buttons").scroll(function() {
+		if ($(this).scrollTop() > 100) {
+			$("#gotop").fadeIn();
+		} else {
+			$("#gotop").fadeOut();
+		}
+	});
 });
+</script> -->
+	<script>
+	$(function() {
+		$("#gotop").hide();
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$("#gotop").fadeIn();
+			} else {
+				$("#gotop").fadeOut();
+			}
+		});
+	});
 </script>
-		<a href="#" id="gotop"
-			style="display: none; position: fixed; bottom: 10px; right: 10px; z-index: 99999999"
-			title="Top"> <img src="resources/images/topButton3.gif"
-			style="width: 35px; height: 35px; margin: -10px -5px;" border="0" /></a>
+<a href="#" id="gotop"
+	style="display: none; position: fixed; bottom: 1rem; right: 0.8rem; z-index: 99"
+	title="Top"> <img src="resources/images/topButton3.gif"
+	style="width: 35px; height: 35px; margin: -10px -5px;" border="0" /></a>
 </body>
 </html>

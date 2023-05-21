@@ -57,18 +57,18 @@ request.setCharacterEncoding("utf-8");
 				<div class="col-xxl-7">
 
 					<div class="centered-div">
-						<div id="map" style="width: 300px; height: 300px;"></div>
+						<div id="map" style="width: 100%; height: 40vh;"></div>
 					</div>
-					<div class="centered-div">
+					<div class="centered-div pt-1">
 						<p class="gap-3 lead rounded text-dark fs-6 fw-light"
-							style="width: 300px; text-shadow: 1px 1px 1px white; background-color: rgba(255, 255, 255, 0.5);">
+							style="text-shadow: 1px 1px 1px white; background-color: rgba(255, 255, 255, 0.3);">
 							현재 위치를 기준으로 병원 내 진료 부서 및 편의시설로 안내하는 가이드입니다.</p>
 					</div>
 					<div
 						class="text-center InternetIssue gap-3 d-sm-flex justify-content-sm-center Sans ">
 						<a href="departmentMap"
 							class="bg-gradient-primary-to-secondary btn btn-lg fs-5 fw-bolder mt-1"><span></span>
-							<span></span> <span></span> <span></span>병원 내부 위치 안내</a>
+							<span></span> <span></span> <span></span>병원 내부 위치 안내 가이드</a>
 					</div>
 				</div>
 			</div>
