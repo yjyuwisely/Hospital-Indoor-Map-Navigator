@@ -75,8 +75,7 @@ html, body {
 		<div class="map-container container px-3 pt-2 pb-3">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-12 col-md-8 col-lg-6 col-xxl-7 text-start">
-						<span class="DarkText-gradient d-inline fw-bolder Sans fs-5">병원
-							내부 위치 안내 가이드</span>
+						<span class="DarkText-gradient d-inline fw-bolder Sans fs-5">병원 내 위치 안내 가이드</span>
 					<div class="centered-div mt-2">
 						<!-- 지도 -->
 						<div id="map" style="width: 100%; height: 40vh;"></div>
@@ -116,24 +115,26 @@ html, body {
 				</td>
 			</tr>
 			<tr class="text-center">
-
-				<td><input type="button" id="endocrine" value="내분비내과"
+				<td>
+				<input type="button" id="endocrine" value="내분비내과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0">
 					<input type="button" id="Respiratory" value="호흡기내과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0"></td>
 			</tr>
 			<tr class="text-center">
-				<td><input type="button" id="gastroenterology" value="소화기내과"
+				<td>
+				<input type="button" id="gastroenterology" value="소화기내과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
 					<input type="button" id="Renal" value="신장내과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2"></td>
 			</tr>
 			<tr class="text-center">
-				<td><input type="button" id="Hematologic" value="혈액종양내과"
+				<td>
+				<input type="button" id="Hematologic" value="혈액종양내과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
 					<input type="button" id="Dermatology" value="피부과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2">
-				<td>
+				</td>
 			</tr>
 			<!-- 2층 -->
 			<tr>
@@ -248,8 +249,7 @@ if (navigator.geolocation) {
             lon = position.coords.longitude; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '<div style="padding:5px;">현재 위치</div>'; // 인포윈도우에 표시될 내용입니다
-        
+            message = '<div style="width:150px;text-align:center;padding:6px 0;">현재 위치</div>'; // 인포윈도우에 표시될 내용입니다
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
         console.log("lat = " + lat);
@@ -309,33 +309,26 @@ var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 </script>
 <!-- Top Button -->
-<!-- <script>
-$(function() {
-	$("#gotop").hide();
-	$(".department-buttons").scroll(function() {
-		if ($(this).scrollTop() > 100) {
-			$("#gotop").fadeIn();
-		} else {
-			$("#gotop").fadeOut();
-		}
-	});
-});
-</script> -->
-	<script>
-	$(function() {
-		$("#gotop").hide();
-		$(window).scroll(function() {
-			if ($(this).scrollTop() > 100) {
-				$("#gotop").fadeIn();
-			} else {
-				$("#gotop").fadeOut();
-			}
-		});
-	});
+<script>
+  $(function() {
+    $("#gotop").hide();
+    $(".department-buttons").scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $("#gotop").fadeIn();
+      } else {
+        $("#gotop").fadeOut();
+      }
+    });
+
+    $("#gotop").click(function(e) {
+      e.preventDefault();
+      $(".department-buttons").animate({ scrollTop: 0 }, "slow");
+    });
+  });
 </script>
 <a href="#" id="gotop"
 	style="display: none; position: fixed; bottom: 1rem; right: 0.8rem; z-index: 99"
 	title="Top"> <img src="resources/images/topButton3.gif"
-	style="width: 35px; height: 35px; margin: -10px -5px;" border="0" /></a>
+	style="width: 30px; height: 30px; margin: -10px -5px;" border="0" /></a>
 </body>
 </html>
