@@ -114,7 +114,7 @@ if (navigator.geolocation) {
             <span class="center">현재 위치</span>
             <span class="right"></span>
             </div>'; */
-            '<div style="width:150px;text-align:center;padding:6px 0;">현재 위치</div>'; 
+            '<div style="width:100px;text-align:right;padding:6px 0;">현재 위치</div>'; 
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);

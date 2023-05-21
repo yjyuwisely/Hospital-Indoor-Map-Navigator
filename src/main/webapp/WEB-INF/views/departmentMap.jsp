@@ -58,7 +58,7 @@ html, body {
 }
 
 .department-buttons {
-  height: 50%;
+  height: 35%;
   overflow-y: auto;
 }
 
@@ -116,7 +116,7 @@ html, body {
 			</tr>
 			<tr class="text-center">
 				<td>
-				<input type="button" id="endocrine" value="내분비내과"
+				<input type="button" id="endocrine" value="내분비내과" 
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0">
 					<input type="button" id="Respiratory" value="호흡기내과"
 					class="btn-1 bg-gradient-primary-to-secondary btn btn-primary d-inline-block col-lg-3 col-5 Sans fw-bolder fs-6 m-2 mt-0"></td>
@@ -228,7 +228,6 @@ html, body {
 	</script>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="resources/handledata.js"></script>
-		<script src="resources/topButton.js"></script>
 		<!-- Kakao Map API -->
 		<script type="text/javascript"
 			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9e59e38aea07e8af3f0d4652fa425483"></script>
@@ -249,7 +248,7 @@ if (navigator.geolocation) {
             lon = position.coords.longitude; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '<div style="width:150px;text-align:center;padding:6px 0;">현재 위치</div>'; // 인포윈도우에 표시될 내용입니다
+            message = '<div style="width:100px;text-align:right;padding:6px 0;">현재 위치</div>';  // 인포윈도우에 표시될 내용입니다
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
         console.log("lat = " + lat);
