@@ -40,12 +40,6 @@ request.setCharacterEncoding("utf-8");
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-.label {margin-bottom: 96px;}
-.label * {display: inline-block;vertical-align: top;}
-.label .left {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_l.png") no-repeat;display: inline-block;height: 24px;overflow: hidden;vertical-align: top;width: 7px;}
-.label .center {background: url(https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_bg.png) repeat-x;display: inline-block;height: 24px;font-size: 12px;line-height: 24px;}
-.label .right {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_r.png") -1px 0  no-repeat;display: inline-block;height: 24px;overflow: hidden;width: 6px;}
 }
 </style>
 
@@ -55,7 +49,6 @@ request.setCharacterEncoding("utf-8");
 		<div class="container p-3">
 			<div class="row gx-5 align-items-center">
 				<div class="col-xxl-7">
-
 					<div class="centered-div">
 						<div id="map" style="width: 100%; height: 40vh;"></div>
 					</div>
@@ -109,12 +102,7 @@ if (navigator.geolocation) {
         // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
         var locPosition = new kakao.maps.LatLng(lat, lon),
      		// 인포윈도우에 표시될 내용입니다  class="info-title"
-            message = /* '<div class ="label">
-            <span class="left"></span>
-            <span class="center">현재 위치</span>
-            <span class="right"></span>
-            </div>'; */
-            '<div style="width:100px;text-align:right;padding:6px 0;">현재 위치</div>'; 
+            message = '<div style="width:100px;text-align:right;padding:6px 0;">현재 위치</div>'; 
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
