@@ -43,7 +43,7 @@ request.setCharacterEncoding("utf-8");
 }
 
 header {
-  height: 15px !important;
+  height: 10px !important;
   opacity: 0.9;
 }
 

@@ -36,6 +36,11 @@ request.setCharacterEncoding("utf-8");
 <!-- Navigation-->
 <jsp:include page="nav.jsp" flush="false" />
 <style>
+header {
+  height: 30px !important;
+  opacity: 0.9;
+}
+
 .centered-div {
 	display: flex;
 	justify-content: center;
