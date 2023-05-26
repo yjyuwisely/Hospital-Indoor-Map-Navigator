@@ -18,7 +18,8 @@ I worked on this project from May 12th, 2023 to May 24th, 2023.</p>
 <h2>Project Role</h2>
 <p align="justify" style="display:none">For this project, my role included the following:
 
-<li>Implemented responsive web pages using Start Bootstrap framework and contributed to front-end development.</li>
+<li>Implemented responsive web pages using custom code for images, logos, and backgrounds, and utilized the Bootstrap framework for buttons and navigation bars, contributing to front-end development.
+<li>Designing and implementing scroll bars and dividing pages into two horizontal sections, further enhancing the user experience.</li>
 <li>Customized and enhanced functionality of Kakao Maps API for seamless navigation of hospital indoor areas on mobile devices.</li>
 <li>Designed and planned user interface using Figma, including prototyping, for the hospital indoor navigation application.</li>
 <li>Created a presentation slide deck using Canva to showcase the features and functionality of the hospital indoor navigation application.</li>
