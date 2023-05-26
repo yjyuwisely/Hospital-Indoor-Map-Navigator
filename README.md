@@ -30,10 +30,9 @@ as it allowed me to collaborate with other developers and contribute to a real-w
 
 <h2>Visual Content</h2> 
 Explore the project's visual content, which includes videos and screenshots, to get a better understanding of the website's features and functionality.
-<br>
 
-<b>[Video Demonstrations and Screenshots](https://yjyuwisely.tistory.com/entry/230523-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2-12%EC%9D%BC-%EC%B0%A8-Tue-%EC%B5%9C%EC%A2%85-%ED%99%94%EB%A9%B4-%EA%B5%AC%ED%98%84-%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9)</b><br>
-Access the visual content to view video demonstrations and browse through the screenshots showcasing different aspects of the website.
+<b>[Video Demonstrations and Screenshots](https://yjyuwisely.tistory.com/entry/230523-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-2-12%EC%9D%BC-%EC%B0%A8-Tue-%EC%B5%9C%EC%A2%85-%ED%99%94%EB%A9%B4-%EA%B5%AC%ED%98%84-%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9)</b>
+<!-- : Access the visual content to view video demonstrations and browse through the screenshots showcasing different aspects of the website. -->
 
 <h2>Page Screenshot</h2>
 Here's a screenshot of the main page:
